@@ -55,7 +55,7 @@ cat readme
 #### Question
 
 The password for the next level is stored in a file called - located in the home
-directory
+directory.
 
 #### Solution
 
@@ -70,15 +70,36 @@ cat ./-
 
 #### Question
 
-The password for the next level is stored in a file called spaces in this filename
-located in the home directory
+The password for the next level is stored in a file called spaces in this
+filename located in the home directory.
 
 #### Solution
 
 ```bash
 ls
 # space in this filename
-# A tip for this challenge is to type "spaces" and then type "tab" to autocomplete the filename
+# A tip for this challenge is to type "spaces" and then type "tab" to
+# autocomplete the filename
 cat spaces\ in\ this\ filename
+# ***password for next level***
+```
+
+### Level 3
+
+#### Question
+
+The password for the next level is stored in a hidden file in the inhere
+directory.
+
+
+#### Solution
+
+```bash
+ls
+# inhere/
+cd inhere/
+ls -a
+# . .. .hidden
+cat .hidden
 # ***password for next level***
 ```
