@@ -65,3 +65,20 @@ ls
 cat ./-
 # ***password for next level***
 ```
+
+### Level 2
+
+#### Question
+
+The password for the next level is stored in a file called spaces in this filename
+located in the home directory
+
+#### Solution
+
+```bash
+ls
+# space in this filename
+# A tip for this challenge is to type "spaces" and then type "tab" to autocomplete the filename
+cat spaces\ in\ this\ filename
+# ***password for next level***
+```
