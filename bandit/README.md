@@ -91,7 +91,6 @@ cat spaces\ in\ this\ filename
 The password for the next level is stored in a hidden file in the inhere
 directory.
 
-
 #### Solution
 
 ```bash
@@ -101,5 +100,32 @@ cd inhere/
 ls -a
 # . .. .hidden
 cat .hidden
+# ***password for next level***
+```
+
+### Level 4
+
+#### Question
+
+The password for the next level is stored in the only human-readable file in
+the inhere directory. Tip: if your terminal is messed up, try the “reset”
+command.
+
+#### Solution
+
+```bash
+ls
+# inhere/
+cd inhere/
+ls
+# -file00  -file01  -file02  -file03  -file04  -file05  -file06  -file07  -file08  -file09
+for i in $(ls); do file ./$i; done
+# ...
+# ./-file05: data
+# ./-file06: data
+# ./-file07: ASCII text
+# ./-file08: data
+# ./-file09: data
+cat ./-file07
 # ***password for next level***
 ```
