@@ -171,3 +171,27 @@ find . -readable -size 1033c -not -executable
 cat maybehere07/.file2
 # ***password for next level***
 ```
+
+### Level 6
+
+#### Question
+
+The password for the next level is stored somewhere on the server and has all
+of the following properties:
+
+	owned by user bandit7
+	owned by group bandit6
+	33 bytes in size
+
+#### Solution
+
+```bash
+find / -user bandit7 -group bandit6 -size 33c 2> /dev/null
+# It is necessary to use "2> /dev/null" because if not, a bunch of files with 
+# "No files or directories" and "Permission denied" will be returned,
+# polluting the display
+#
+# /var/lib/dpkg/info/bandit7.password
+cat /var/lib/dpkg/info/bandit7.password
+# ***password for next level***
+```
