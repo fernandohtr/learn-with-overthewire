@@ -5,7 +5,20 @@
 ## Prerequisites
 
 - ssh
+- sshpass
 - shell or python3
+
+## First access
+
+On first access you will use the default path with ssh. This is necessary
+because on first login ssh will add the host to ssh's `host_know` list.
+
+Example:
+```
+ssh -p 2220 bandit0@bandit.labs.overthewire.org
+```
+
+Thereafter the autobandit script can be used.
 
 ## Usage
 
