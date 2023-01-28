@@ -208,3 +208,19 @@ find / -user bandit7 -group bandit6 -size 33c 2> /dev/null
 cat /var/lib/dpkg/info/bandit7.password
 # ***password for next level***
 ```
+
+### Level 7
+
+#### Question
+
+The password for the next level is stored in the file data.txt next to the word
+millionth
+
+#### Solution
+
+```bash
+ls
+# data.txt
+grep millionth data.txt
+# millionth         ***password for next level***
+```
