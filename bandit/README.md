@@ -224,3 +224,19 @@ ls
 grep millionth data.txt
 # millionth         ***password for next level***
 ```
+
+### Level 8
+
+#### Question
+
+The password for the next level is stored in the file data.txt and is the only
+line of text that occurs only once
+
+#### Solution
+
+```bash
+ls
+# data.txt
+cat data.txt | sort | uniq -u
+# ***password for next level***
+```
