@@ -277,3 +277,19 @@ ls
 cat data.txt | base64 -d
 # The password is ***password for next level***
 ```
+
+### Level 11
+
+#### Question
+
+The password for the next level is stored in the file data.txt, where all
+lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
+
+#### Solution
+
+```bash
+ls
+# data.txt
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+# The password is ***password for next level***
+```
