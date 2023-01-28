@@ -240,3 +240,24 @@ ls
 cat data.txt | sort | uniq -u
 # ***password for next level***
 ```
+
+### Level 9
+
+#### Question
+
+The password for the next level is stored in the file data.txt in one of the
+few human-readable strings, preceded by several ‘=’ characters.
+
+#### Solution
+
+```bash
+ls
+# data.txt
+file data.txt
+# data.txt: data
+strings data.txt | grep -E "==+"
+# c========== the
+# h;========== password
+# ========== isT
+# n.E========== ***password for next level***
+```
