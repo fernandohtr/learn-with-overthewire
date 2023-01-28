@@ -261,3 +261,19 @@ strings data.txt | grep -E "==+"
 # ========== isT
 # n.E========== ***password for next level***
 ```
+
+### Level 10
+
+#### Question
+
+The password for the next level is stored in the file data.txt, which contains
+base64 encoded data
+
+#### Solution
+
+```bash
+ls
+# data.txt
+cat data.txt | base64 -d
+# The password is ***password for next level***
+```
