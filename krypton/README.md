@@ -55,3 +55,24 @@ krypton1 using SSH on port 2231. You can find the files for other levels in
 echo S1JZUFRPTklTR1JFQVQ= | base64 -d
 # ***password for next level***
 ```
+
+### Level 1
+
+#### Question
+
+The password for level 2 is in the file ‘krypton2’. It is ‘encrypted’
+using a simple rotation. It is also in non-standard ciphertext format. When
+using alpha characters for cipher text it is normal to group the letters into
+5 letter clusters, regardless of word boundaries. This helps obfuscate any
+patterns. This file has kept the plain text word boundaries and carried them to
+the cipher text. Enjoy!
+
+#### Solution
+
+```bash
+cd /krypton/krypton1
+ls
+# krypton2 README
+cat krypton | tr 'A-Z' 'N-ZA-M'
+# LEVEL TWO PASSWORD ***password for next level***
+```
