@@ -160,7 +160,7 @@ directory and has all of the following properties:
 ls
 # inhere/
 cd inhere/
-# ls -R
+ls -R
 # .:
 # maybehere00  maybehere03  maybehere06  maybehere09  maybehere12  maybehere15  maybehere18
 # maybehere01  maybehere04  maybehere07  maybehere10  maybehere13  maybehere16  maybehere19
