@@ -293,3 +293,72 @@ ls
 cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 # The password is ***password for next level***
 ```
+
+### Level 12
+
+#### Question
+
+The password for the next level is stored in the file data.txt, which is a
+hexdump of a file that has been repeatedly compressed. For this level it may
+be useful to create a directory under /tmp in which you can work using mkdir.
+For example: mkdir /tmp/myname123. Then copy the datafile using cp, and rename
+it using mv (read the manpages!)
+
+#### Solution
+
+```bash
+ls
+# data.txt
+mktemp -d
+# /tmp/tmp.wW0Kh4m0PC
+cp data.txt /tmp/tmp.wW0Kh4m0PC
+cat data.txt | xxd -r > hexdump
+file hexdump
+# hexdump: gzip compressed data, was "data2.bin" ...
+mv hexdump hexdump.gz
+gzip -d hexdump.gz
+ls
+# data.txt  hexdump
+file hexdump
+# hexdump: bzip2 compressed data, block size = 900k
+mv hexdump hexdump.bz2
+ls
+# data.txt  hexdump.bz2
+bzip2 -d hexdump.bz2
+file hexdump
+# hexdump: gzip compressed data, was "data4.bin" ...
+mv hexdump hexdump.gz
+gzip -d hexdump.gz
+ls
+# data.txt  hexdump
+file hexdump
+# hexdump: POSIX tar archive (GNU)
+tar -xvf hexdump
+# data5.bin
+ls
+# data5.bin  data.txt  hexdump
+file data5.bin
+# data5.bin: POSIX tar archive (GNU)
+tar -xvf data5.bin
+# data6.bin
+file data6.bin
+# data6.bin: bzip2 compressed data, block size = 900k
+mv data6.bin data6.bin.bz2
+bzip2 -d data6.bin.bz2
+ls
+# data5.bin  data6.bin  data.txt  hexdump
+file data6.bin
+# data6.bin: POSIX tar archive (GNU)
+tar -xvf data6.bin data6.bin
+# data8.bin
+file data8.bin
+# data8.bin: gzip compressed data, was "data9.bin" ...
+mv data8.bin data8.bin.gz
+gzip -d data8.bin.gz
+ls
+# data5.bin  data6.bin  data8.bin  data.txt  hexdump
+file data8.bin
+data8.bin: ASCII text
+cat data8.bin
+# The password is ***password for next level***
+```
