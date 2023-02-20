@@ -401,3 +401,34 @@ nc localhost 30000
 # Correct!
 # ***password for next level***
 ```
+
+### Level 15
+
+#### Question
+
+The password for the next level can be retrieved by submitting the password of
+the current level to port 30001 on localhost using SSL encryption.
+
+Helpful note: Getting “HEARTBEATING” and “Read R BLOCK”? Use -ign_eof and read
+the “CONNECTED COMMANDS” section in the manpage. Next to ‘R’ and ‘Q’, the ‘B’
+command also works in this version of that command…
+
+#### Solution
+
+```bash
+pass=**password of current level**; openssl s_client -connect localhost:30001
+# CONNECTED(00000003)
+# Can't use SSL_get_servername
+# depth=0 CN = localhost
+# verify error:num=18:self-signed certificate
+# <...>
+#     Verify return code: 10 (certificate has expired)
+#     Extended master secret: no
+#     Max Early Data: 0
+# ---
+# read R BLOCK
+#
+# # pass the current level password
+# Correct!
+# ***password for next level***
+```
