@@ -45,6 +45,8 @@ python3 autobandit.py 12
 
 Record how to find the password in each level
 
+---
+
 ### Level 0
 
 #### Question
@@ -63,6 +65,8 @@ cat readme
 # ***password for next level***
 ```
 
+---
+
 ### Level 1
 
 #### Question
@@ -78,6 +82,8 @@ ls
 cat ./-
 # ***password for next level***
 ```
+
+---
 
 ### Level 2
 
@@ -97,6 +103,8 @@ cat spaces\ in\ this\ filename
 # ***password for next level***
 ```
 
+---
+
 ### Level 3
 
 #### Question
@@ -115,6 +123,8 @@ ls -a
 cat .hidden
 # ***password for next level***
 ```
+
+---
 
 ### Level 4
 
@@ -142,6 +152,8 @@ for i in $(ls); do file ./$i; done
 cat ./-file07
 # ***password for next level***
 ```
+
+---
 
 ### Level 5
 
@@ -185,6 +197,8 @@ cat maybehere07/.file2
 # ***password for next level***
 ```
 
+---
+
 ### Level 6
 
 #### Question
@@ -209,6 +223,8 @@ cat /var/lib/dpkg/info/bandit7.password
 # ***password for next level***
 ```
 
+---
+
 ### Level 7
 
 #### Question
@@ -225,6 +241,8 @@ grep millionth data.txt
 # millionth         ***password for next level***
 ```
 
+---
+
 ### Level 8
 
 #### Question
@@ -240,6 +258,8 @@ ls
 cat data.txt | sort | uniq -u
 # ***password for next level***
 ```
+
+---
 
 ### Level 9
 
@@ -262,6 +282,8 @@ strings data.txt | grep -E "==+"
 # n.E========== ***password for next level***
 ```
 
+---
+
 ### Level 10
 
 #### Question
@@ -278,6 +300,8 @@ cat data.txt | base64 -d
 # The password is ***password for next level***
 ```
 
+---
+
 ### Level 11
 
 #### Question
@@ -293,6 +317,8 @@ ls
 cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 # The password is ***password for next level***
 ```
+
+---
 
 ### Level 12
 
@@ -363,6 +389,8 @@ cat data8.bin
 # The password is ***password for next level***
 ```
 
+---
+
 ### Level 13
 
 #### Question
@@ -384,6 +412,8 @@ cat /etc/bandit_pass/bandit14
 # ***password for next level***
 ```
 
+---
+
 ### Level 14
 
 #### Question
@@ -401,6 +431,8 @@ nc localhost 30000
 # Correct!
 # ***password for next level***
 ```
+
+---
 
 ### Level 15
 
@@ -432,6 +464,8 @@ pass=**password of current level**; openssl s_client -connect localhost:30001
 # Correct!
 # ***password for next level***
 ```
+
+---
 
 ### Level 16
 
@@ -512,6 +546,8 @@ whoami
 cat /etc/bandit_pass/bandit17
 # ***password for next level***
 ```
+
+---
 
 ### Level 17
 
