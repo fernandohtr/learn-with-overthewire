@@ -2,6 +2,25 @@
 
 [Bandit wargame](https://overthewire.org/wargames/bandit/) progress.
 
+- [Level 0](#level-0)
+- [Level 1](#level-1)
+- [Level 2](#level-2)
+- [Level 3](#level-3)
+- [Level 4](#level-4)
+- [Level 5](#level-5)
+- [Level 6](#level-6)
+- [Level 7](#level-7)
+- [Level 8](#level-8)
+- [Level 9](#level-9)
+- [Level 10](#level-10)
+- [Level 11](#level-11)
+- [Level 12](#level-12)
+- [Level 13](#level-13)
+- [Level 14](#level-14)
+- [Level 15](#level-15)
+- [Level 16](#level-16)
+- [Level 17](#level-17)
+
 ## Prerequisites
 
 - ssh
