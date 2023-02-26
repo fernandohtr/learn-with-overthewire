@@ -512,3 +512,31 @@ whoami
 cat /etc/bandit_pass/bandit17
 # ***password for next level***
 ```
+
+### Level 17
+
+#### Question
+
+There are 2 files in the homedirectory: passwords.old and passwords.new. The
+password for the next level is in passwords.new and is the only line that has
+been changed between passwords.old and passwords.new
+
+NOTE: if you have solved this level and see ‘Byebye!’ when trying to log into
+bandit18, this is related to the next level, bandit19
+
+#### Solution
+
+```bash
+diff -u passwords.old passwords.new
+# --- passwords.old       2023-02-21 22:02:58.751782564 +0000
+# +++ passwords.new       2023-02-21 22:02:58.751782564 +0000
+# @@ -39,7 +39,7 @@
+#  Ja4UgVyn7tL2FAv0RaHbKtxdlIxniFvo
+#  xSQA9qNUnggu1gcO8y8HxKnGDII5PvG8
+#  Z6FBNZBwl5AEkdfMpSHSvsE6BpHiDW5E
+# -f9wS9ZUDvZoo3PooHgYuuWdawDFvGld2
+# +***password for next level***
+#  mZ7ZnyztM969tLYbrvgDENdbRicAVX4e
+#  Xkqvz7KtwI0vRS6CaTEc1Y0n8G8sTL1J
+#  CwZICXOLYGveg8J1nl7MdSKox1bCrI9I
+```
