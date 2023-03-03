@@ -21,6 +21,7 @@
 - [Level 16](#level-16)
 - [Level 17](#level-17)
 - [Level 18](#level-18)
+- [Level 19](#level-19)
 
 ## Prerequisites
 
@@ -619,5 +620,28 @@ you log in with SSH.
 ./autobandit.sh 18 ls
 # readme
 ./autobandit.sh 18 "cat readme"
+# +***password for next level***
+```
+
+---
+
+### Level 19
+
+#### Question
+
+To gain access to the next level, you should use the setuid binary in the
+homedirectory. Execute it without arguments to find out how to use it. The
+password for this level can be found in the usual place (/etc/bandit_pass),
+after you have used the setuid binary.
+
+#### Solution
+
+```bash
+ls
+# bandit20-do
+./bandit20-do
+# Run a command as another user.
+#   Example: ./bandit20-do id
+./bandit20-do cat /etc/bandit_pass/bandit20
 # +***password for next level***
 ```
