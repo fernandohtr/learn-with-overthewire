@@ -20,6 +20,7 @@
 - [Level 15](#level-15)
 - [Level 16](#level-16)
 - [Level 17](#level-17)
+- [Level 18](#level-18)
 
 ## Prerequisites
 
@@ -594,4 +595,29 @@ diff -u passwords.old passwords.new
 #  mZ7ZnyztM969tLYbrvgDENdbRicAVX4e
 #  Xkqvz7KtwI0vRS6CaTEc1Y0n8G8sTL1J
 #  CwZICXOLYGveg8J1nl7MdSKox1bCrI9I
+```
+
+---
+
+### Level 18
+
+#### Question
+
+The password for the next level is stored in a file readme in the
+homedirectory. Unfortunately, someone has modified .bashrc to log you out when
+you log in with SSH.
+
+#### Solution
+
+```bash
+./autobandit.sh 18
+# <...>
+#   Enjoy your stay!
+#
+# Byebye !
+# Connection to bandit.labs.overthewire.org closed.
+./autobandit.sh 18 ls
+# readme
+./autobandit.sh 18 "cat readme"
+# +***password for next level***
 ```
